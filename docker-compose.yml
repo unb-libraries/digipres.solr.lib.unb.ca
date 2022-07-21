@@ -1,0 +1,15 @@
+services:
+  digipres.solr.lib.unb.ca:
+    build:
+      context: .
+    restart: unless-stopped
+    container_name: digipres.solr.lib.unb.ca
+    env_file:
+      - ./env/solr.env
+    expose:
+      - "8983"
+    networks:
+      - digipres.solr.lib.unb.ca
+networks:
+  digipres.solr.lib.unb.ca:
+    name: digipres.solr.lib.unb.ca

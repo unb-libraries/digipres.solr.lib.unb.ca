@@ -1,0 +1,21 @@
+dockworker:
+  version: '5'
+  application:
+    name: digipres.solr.lib.unb.ca
+    finish_marker: 'Server Started'
+    project_prefix: DIGIPRES
+    upstream_images:
+      - solr:8.8
+    uuid: 3508
+  deployment:
+    environments:
+      - prod
+  github:
+    repo: digipres.solr.lib.unb.ca
+    owner: unb-libraries
+  image:
+    push_branches:
+      - prod
+    name: ghcr.io/unb-libraries/digipres.solr.lib.unb.ca
+    date_tag_image: true
+    repository: ghcr
