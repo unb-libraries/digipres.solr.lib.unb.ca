@@ -9,12 +9,17 @@ dockworker:
     uuid: 3508
   deployment:
     environments:
+      - dev
       - prod
+    workflow:
+      source: dockworker
+      type: deployment-workflow
   github:
     repo: digipres.solr.lib.unb.ca
     owner: unb-libraries
   image:
     push_branches:
+      - dev
       - prod
     name: ghcr.io/unb-libraries/digipres.solr.lib.unb.ca
     date_tag_image: true
